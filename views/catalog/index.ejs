@@ -1,0 +1,7 @@
+<%- include('../partials/header') %>
+<section class="intro"><div><p class="eyebrow">LIBRERÍA DIGITAL</p><h1>Historias para quedarte,<br><em>ideas para llevarte.</em></h1><p>Explora el catálogo, sus autores y los conceptos que cada obra ayuda a comprender.</p></div><div class="monogram">TL</div></section>
+<form class="search" method="get" action="<%= basePath %>/"><label for="q">Buscar en el catálogo</label><div><input id="q" name="q" value="<%= q %>" placeholder="Título o ISBN"><button>Buscar</button></div></form>
+<div class="section-title"><h2><%= q ? 'Resultados' : 'Selección completa' %></h2><span><%= books.length %> libros</span></div>
+<section class="book-grid"><% books.forEach(book=>{ %><article class="book-card"><a href="<%= basePath %>/books/<%= book.id %>" class="cover"><% if(book.cover){ %><img src="<%= basePath %><%= book.cover %>" alt="Portada de <%= book.title %>"><% }else{ %><span><%= book.title.slice(0,1) %></span><small>Sin imagen</small><% } %></a><div><p class="meta"><%= book.category %> · <%= book.format %></p><h3><a href="<%= basePath %>/books/<%= book.id %>"><%= book.title %></a></h3><p><%= book.authors || 'Autor por asignar' %></p><div class="price"><strong>$<%= Number(book.price).toFixed(2) %></strong><span><%= book.stock %> disponibles</span></div></div></article><% }) %></section>
+<% if(!books.length){ %><div class="empty"><h2>No encontramos coincidencias</h2><p>Prueba con otra parte del título o con el ISBN.</p></div><% } %>
+<%- include('../partials/footer') %>

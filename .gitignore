@@ -1,0 +1,13 @@
+node_modules/
+.pnpm-store/
+tmp/
+outputs/
+.env
+uploads/*
+!uploads/.gitkeep
+npm-debug.log*
+.DS_Store
+/ejercicio02.tar.gz
+/libreria-monolitica-node-postgresql.zip
+/ejercicio02.tar.gz
+/libreria-monolitica-node-postgresql.zip
