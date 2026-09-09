@@ -1,0 +1,42 @@
+/* CSS aplicado directamente al XML mediante xml-stylesheet. */
+* { box-sizing: border-box; }
+library {
+  display: block;
+  width: 100%;
+  padding: 20px;
+  background-color: #f0f0f0;
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+books {
+  display: block;
+  width: 100%;
+  background-color: #cccccc;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+book {
+  display: block;
+  width: 100%;
+  background-color: #e0e0e0;
+  border: 1px solid #999;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+title { display: block; font-size: 1.2em; font-weight: bold; margin-bottom: 5px; }
+author { display: block; font-style: italic; margin-bottom: 5px; }
+genre, price, stock, format { display: block; margin-bottom: 3px; }
+genre { color: #666; }
+price { color: #009900; }
+stock { color: #ff0000; }
+format { color: #0000ff; }
+year, category, description, images, image, concepts, concept, term,
+chapter_reference, page_reference { display: block; }
+concepts, images { margin-top: 8px; }
+concept { margin-bottom: 8px; }
+term { font-weight: bold; }
+image { overflow-wrap: anywhere; }
+year::before { content: "Año: "; }
+genre::before { content: "Género: "; }
+price::before { content: "Precio: "; }
+stock::before { content: "Stock: "; }
+format::before { content: "Formato: "; }

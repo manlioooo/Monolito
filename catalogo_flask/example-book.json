@@ -1,0 +1,18 @@
+{
+  "isbn": "9781234567897",
+  "title": "Introducción a los sistemas web",
+  "publication_year": 2026,
+  "price": "249.90",
+  "stock": 12,
+  "format_id": 1,
+  "category_id": 1,
+  "author_ids": [1],
+  "genre_ids": [1],
+  "description": "Un libro de ejemplo para probar el catálogo.",
+  "images": [
+    {"file_path": "/covers/sistemas-web.jpg", "alt_text": "Portada del libro", "sort_order": 0, "is_primary": true}
+  ],
+  "concepts": [
+    {"concept_id": 1, "definition": "Descripción del concepto aplicada específicamente a este libro.", "chapter_reference": "1", "page_reference": "15"}
+  ]
+}
